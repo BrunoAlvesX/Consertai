@@ -1,30 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    // Aqui você pode adicionar a lógica de cadastro real (API etc)
+    console.log("Usuário cadastrado:", { email, senha });
+
+    // Redireciona para a tela de login
+    navigate("/login");
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 p-4">
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
-        {/* Logo / Título */}
         <div className="mb-8 text-center">
           <h1 className="text-4xl font-extrabold text-blue-600 mb-2">Concertai</h1>
           <p className="text-gray-500">Crie sua conta</p>
         </div>
 
-        {/* Formulário */}
-        <form className="space-y-6">
-          <div>
-            <label htmlFor="nome" className="block text-sm font-medium text-gray-700">
-              Nome
-            </label>
-            <input
-              type="text"
-              id="nome"
-              placeholder="Seu nome completo"
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
-            />
-          </div>
-
+        <form onSubmit={handleRegister} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               E-mail
@@ -32,8 +32,11 @@ const Register = () => {
             <input
               type="email"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="seuemail@email.com"
               className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              required
             />
           </div>
 
@@ -44,8 +47,11 @@ const Register = () => {
             <input
               type="password"
               id="senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
               placeholder="••••••••"
               className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              required
             />
           </div>
 
@@ -56,14 +62,6 @@ const Register = () => {
             Cadastrar
           </button>
         </form>
-
-        {/* Link para login */}
-        <p className="text-center text-sm text-gray-600 mt-6">
-          Já tem uma conta?{" "}
-          <Link to="/" className="text-blue-600 font-medium hover:underline">
-            Entrar
-          </Link>
-        </p>
       </div>
     </div>
   );

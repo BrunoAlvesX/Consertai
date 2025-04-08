@@ -1,7 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Aqui você pode validar o login
+    console.log("Usuário logado:", { email, senha });
+
+    // Redireciona para a Home
+    navigate("/");
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 p-4">
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
@@ -12,7 +26,7 @@ const Login = () => {
         </div>
 
         {/* Formulário */}
-        <form className="space-y-6">
+        <form onSubmit={handleLogin} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               E-mail
@@ -21,7 +35,10 @@ const Login = () => {
               type="email"
               id="email"
               placeholder="seuemail@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              required
             />
           </div>
 
@@ -33,7 +50,10 @@ const Login = () => {
               type="password"
               id="senha"
               placeholder="••••••••"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
               className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              required
             />
           </div>
 
