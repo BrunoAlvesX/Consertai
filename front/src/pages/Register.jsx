@@ -1,70 +1,82 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import concertai from '../assets/concertailogo.png';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
+export default function Login() {
+
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
 
-  const handleRegister = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Aqui você pode adicionar a lógica de cadastro real (API etc)
-    console.log("Usuário cadastrado:", { email, senha });
-
-    // Redireciona para a tela de login
-    navigate("/login");
+    console.log('Email:', email);
+    console.log('Password:', password);
+    // Aqui você pode chamar a API de login
+    navigate('/login');
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 p-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
-        <div className="mb-8 text-center">
-          <h1 className="text-4xl font-extrabold text-blue-600 mb-2">Concertai</h1>
-          <p className="text-gray-500">Crie sua conta</p>
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-blue-900">
+      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg">
+        <div className="flex justify-center">
+          <img src={concertai} alt="Logo ConsertAI" className="h-48 object-contain" />
 
-        <form onSubmit={handleRegister} className="space-y-6">
+        </div>
+        <h2 className="text-2xl font-bold text-center text-gray-800">Cadastre sua conta</h2>
+        <form className="space-y-4" onSubmit={handleSubmit}>
+        <div>
+            <label className="block mb-1 text-sm font-medium text-gray-700">Nome</label>
+            <input
+              type="nome"
+              required
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Digite seu nome"
+            />
+          </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              E-mail
-            </label>
+            <label className="block mb-1 text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
-              id="email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="seuemail@email.com"
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
-              required
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Digite seu email"
             />
           </div>
-
           <div>
-            <label htmlFor="senha" className="block text-sm font-medium text-gray-700">
-              Senha
-            </label>
+            <label className="block mb-1 text-sm font-medium text-gray-700">Senha</label>
             <input
               type="password"
-              id="senha"
-              value={senha}
-              onChange={(e) => setSenha(e.target.value)}
-              placeholder="••••••••"
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Digite sua senha"
             />
           </div>
-
           <button
             type="submit"
-            className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition duration-300"
+            className="w-full py-2 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
           >
             Cadastrar
           </button>
         </form>
+
+        <div className="text-center">
+          <p className="text-gray-600">
+            Já tem uma conta?{' '}
+            <Link to="/login" className="text-blue-600 hover:underline">
+              Faça o Login
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
-};
-
-export default Register;
+}
