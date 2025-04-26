@@ -10,23 +10,23 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-    <header className="flex items-center justify-between bg-blue-900 text-white px-6 py-2">
-      <img src={concertai} alt="Logo" className="h-24 invert" />
-      <div className="space-x-2">
-        <button
-          className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200"
-          onClick={() => navigate('/register')} // 👈 redireciona para a página de cadastro
-        >
-          Cadastrar-se
-        </button>
-        <button
-          className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900"
-          onClick={() => navigate('/login')} // 👈 redireciona para a página de login
-        >
-          Login
-        </button>
-      </div>
-    </header>
+      <header className="flex items-center justify-between bg-blue-900 text-white px-6 py-2">
+        <img src={concertai} alt="Logo" className="h-24 invert" />
+        <div className="space-x-2">
+          <button
+            className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200"
+            onClick={() => navigate('/register')} // 👈 redireciona para a página de cadastro
+          >
+            Cadastrar-se
+          </button>
+          <button
+            className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900"
+            onClick={() => navigate('/login')} // 👈 redireciona para a página de login
+          >
+            Login
+          </button>
+        </div>
+      </header>
 
 
       <section className="relative bg-cover bg-center py-20 px-6 text-white" style={{ backgroundImage: `url(${quemsomos})` }}>
@@ -76,13 +76,16 @@ export default function Home() {
       </section>
 
 
-      <section className="py-16 px-6 text-center">
-        <h2 className="text-xl font-bold mb-6">Ainda não sabe se nosso app é pra você?</h2>
-        <p className="max-w-xl mx-auto mb-6 text-gray-700">
+      <section className="py-16 bg-blue-900 text-white px-6 text-center rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold mb-8 font-roboto">Ainda não sabe se nosso app é pra você?</h2>
+        <p className="max-w-xl mx-auto mb-6 text-gray-200">
           Se você precisa resolver um problema técnico de forma rápida, segura e sem dor de cabeça, a nossa plataforma foi feita pra você.
         </p>
-        <Link to="/service" className="text-blue-600 font-semibold hover:underline cursor-pointer">
-          👉 Conheça nossos serviços
+        <Link
+          to="/service"
+          className="text-white bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3 rounded-full font-semibold text-lg hover:from-blue-600 hover:to-blue-800 transition duration-300 transform hover:scale-105"
+        >
+          Conheça nossos serviços
         </Link>
       </section>
 
