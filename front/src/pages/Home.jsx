@@ -15,13 +15,13 @@ export default function Home() {
         <div className="space-x-2">
           <button
             className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200"
-            onClick={() => navigate('/register')} // 👈 redireciona para a página de cadastro
+            onClick={() => navigate('/register')}
           >
             Cadastrar-se
           </button>
           <button
             className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900"
-            onClick={() => navigate('/login')} // 👈 redireciona para a página de login
+            onClick={() => navigate('/login')} 
           >
             Login
           </button>

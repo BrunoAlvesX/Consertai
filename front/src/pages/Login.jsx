@@ -13,7 +13,6 @@ export default function Login() {
     e.preventDefault();
     console.log('Email:', email);
     console.log('Password:', password);
-    // Aqui você pode chamar a API de login
     navigate('/');
   };
 
