@@ -11,15 +11,15 @@ function Service() {
           <img src={concertai} alt="Logo" className="h-24 invert" />
         </Link>
         <div className="space-x-2">
-          <button className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200">Cadastrar-se</button>
-          <button className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900">Login</button>
+          <button className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200 text-lg">Cadastrar-se</button>
+          <button className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900 text-lg">Login</button>
         </div>
       </header>
 
 
       <main className="flex-1 container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-6">Tipos de Serviços</h1>
-        <p className="text-center text-gray-700 mb-10">
+        <h1 className="text-4xl font-bold text-center mb-6">Tipos de Serviços</h1>
+        <p className="text-center text-gray-700 mb-10 text-lg">
           Confira os tipos de atendimento disponíveis na nossa plataforma. Todos os serviços são
           realizados por profissionais qualificados, com agendamento flexível, orçamento rápido e
           acompanhamento direto pelo app.
@@ -27,8 +27,8 @@ function Service() {
 
         <div className="space-y-8 max-w-3xl mx-auto text-gray-800">
           <div>
-            <h2 className="font-bold">Assistência Técnica em Eletrônicos</h2>
-            <ul className="list-disc list-inside">
+            <h2 className="text-2xl font-bold">Assistência Técnica em Eletrônicos</h2>
+            <ul className="list-disc list-inside text-lg">
               <li>Conserto de notebooks, PCs e monitores</li>
               <li>Troca de peças e upgrades</li>
               <li>Configuração e manutenção de software</li>
@@ -37,7 +37,7 @@ function Service() {
 
           <div>
             <h2 className="font-bold">Reparo de Celulares e Tablets</h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-lg">
               <li>Troca de tela, bateria e componentes</li>
               <li>Recuperação de aparelhos com dano por água</li>
               <li>Atualizações e restauração de sistema</li>
@@ -46,7 +46,7 @@ function Service() {
 
           <div>
             <h2 className="font-bold">Manutenção de TVs e Equipamentos de Áudio/Imagem</h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-lg">
               <li>Reparos em TVs LCD/LED/Smart</li>
               <li>Problemas de som, imagem ou conectividade</li>
               <li>Configuração e instalação</li>
@@ -55,7 +55,7 @@ function Service() {
 
           <div>
             <h2 className="font-bold">Eletrodomésticos</h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-lg">
               <li>Conserto de geladeira, máquina de lavar, micro-ondas e mais</li>
               <li>Diagnóstico de falhas técnicas</li>
               <li>Troca de peças e manutenção preventiva</li>
@@ -64,7 +64,7 @@ function Service() {
 
           <div>
             <h2 className="font-bold">Serviços gerais de suporte técnico</h2>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside text-lg">
               <li>Avaliação técnica no local</li>
               <li>Instalação de produtos e equipamentos</li>
               <li>Suporte remoto (quando aplicável)</li>
@@ -73,10 +73,10 @@ function Service() {
         </div>
 
 
-        <p className="italic text-center text-gray-700 mt-12 mb-4">
+        <p className="italic text-center text-gray-700 mt-12 mb-4 text-lg">
           Todos os serviços podem ser solicitados pelo nosso app.
         </p>
-        <p className="text-center text-gray-700 mb-10">
+        <p className="text-center text-gray-700 mb-10 text-lg">
           Descreva o problema, receba orçamentos e agende o atendimento com poucos toques.
         </p>
 

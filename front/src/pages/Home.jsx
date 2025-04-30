@@ -17,13 +17,13 @@ export default function Home() {
         <img src={concertai} alt="Logo" className="h-24 invert" />
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
           <button
-            className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200"
+            className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200 text-lg"
             onClick={() => navigate('/register')}
           >
             Cadastrar-se
           </button>
           <button
-            className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900"
+            className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900 text-lg"
             onClick={() => navigate('/login')}
           >
             Login
@@ -118,7 +118,7 @@ export default function Home() {
 
 
       <section className="py-12 px-6 text-center">
-        <h2 className="text-xl font-bold mb-4">Pronto para resolver seu problema com praticidade e segurança?</h2>
+        <h2 className="text-xl font-bold mb-4 text-lg">Pronto para resolver seu problema com praticidade e segurança?</h2>
         <p className="text-gray-700 text-lg">
           Com o nosso app, você vai além de só encontrar um profissional.
         </p>
@@ -127,8 +127,8 @@ export default function Home() {
 
       <footer className="bg-customBlue text-white text-sm py-6 px-4 flex flex-col items-center space-y-2">
         <div className="flex flex-wrap justify-center space-x-4">
-          <a href="#" className="hover:underline">Termos de Uso</a>
-          <a href="#" className="hover:underline">Política de Privacidade</a>
+          <a href="#" className="hover:underline text-lg">Termos de Uso</a>
+          <a href="#" className="hover:underline text-lg">Política de Privacidade</a>
         </div>
         <div>© 2024 Consertai - Todos os direitos reservados</div>
         <div className="flex space-x-2">
