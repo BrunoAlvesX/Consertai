@@ -26,7 +26,7 @@ export default function Login() {
         <h2 className="text-2xl font-bold text-center text-gray-800">Entrar na sua conta</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">Email</label>
+            <label className="block mb-1 text-sm font-medium text-gray-700 ">Email</label>
             <input
               type="email"
               required
