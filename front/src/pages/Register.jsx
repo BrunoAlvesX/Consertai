@@ -18,7 +18,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-900">
+    <div className="flex items-center justify-center min-h-screen bg-customBlue">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg">
         <div className="flex justify-center">
           <img src={concertai} alt="Logo ConsertAI" className="h-48 object-contain" />
@@ -61,7 +61,7 @@ export default function Login() {
           </div>
           <button
             type="submit"
-            className="w-full py-2 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+            className="w-full py-2 font-semibold text-white bg-customBlue rounded-lg hover:bg-blue-700"
           >
             Cadastrar
           </button>

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        customBlue: '#25334F',
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },

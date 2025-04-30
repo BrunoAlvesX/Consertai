@@ -1,12 +1,15 @@
 import React from 'react';
 import concertai from '../assets/concertailogo-removebg-preview.png'
+import { Link } from 'react-router-dom';
 
 function Service() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      <header className="flex items-center justify-between bg-blue-900 text-white px-6 py-2">
-        <img src={concertai} alt="Logo" className="h-24 invert" />
+      <header className="flex items-center justify-between bg-customBlue text-white px-6 py-2">
+        <Link to="/">
+          <img src={concertai} alt="Logo" className="h-24 invert" />
+        </Link>
         <div className="space-x-2">
           <button className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200">Cadastrar-se</button>
           <button className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900">Login</button>
@@ -93,7 +96,7 @@ function Service() {
       </main>
 
 
-      <footer className="bg-blue-900 text-white text-sm py-6 px-4 flex flex-col items-center space-y-2">
+      <footer className="bg-customBlue text-white text-sm py-6 px-4 flex flex-col items-center space-y-2">
         <div className="flex flex-wrap justify-center space-x-4">
           <a href="#" className="hover:underline">Termos de Uso</a>
           <a href="#" className="hover:underline">Política de Privacidade</a>
