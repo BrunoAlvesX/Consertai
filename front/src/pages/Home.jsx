@@ -94,25 +94,22 @@ export default function Home() {
 
       <section className="py-16 bg-gray-100 px-6 text-center">
         <h2 className="text-2xl font-bold mb-10">Empresas relacionadas</h2>
-        <div className="flex justify-center space-x-12">
+        <div className="flex justify-center items-center gap-4 flex-nowrap overflow-x-auto px-4">
           <img
             src={iconexiaomi}
             alt="iconexiaomi"
-            className="w-[180px] h-[180px] sm:w-[180px] sm:h-[180px] md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px]"
+            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain"
           />
-
           <img
             src={iconelg}
             alt="iconelg"
-            className="w-[180px] h-[180px] sm:w-[180px] sm:h-[180px] md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px]"
+            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain"
           />
-
           <img
             src={iconemotorola}
             alt="iconemotorola"
-            className="w-[180px] h-[180px] sm:w-[180px] sm:h-[180px] md:w-[180px] md:h-[180px] lg:w-[180px] lg:h-[180px]"
+            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain"
           />
-
         </div>
       </section>
 
