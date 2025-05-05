@@ -10,9 +10,20 @@ function Service() {
         <Link to="/" className="flex items-center">
           <img src={concertai} alt="Logo" className="h-24 invert" />
         </Link>
-        <div className="flex items-center space-x-2">
-          <button className="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200 text-lg">Cadastrar-se</button>
-          <button className="border border-white px-4 py-2 rounded hover:bg-white hover:text-blue-900 text-lg">Login</button>
+
+        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+          <button
+            className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200 text-lg"
+            onClick={() => navigate('/register')}
+          >
+            Cadastrar-se
+          </button>
+          <button
+            className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900 text-lg"
+            onClick={() => navigate('/login')}
+          >
+            Login
+          </button>
         </div>
       </header>
 
