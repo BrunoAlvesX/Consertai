@@ -7,14 +7,15 @@ function Service() {
     <div className="flex flex-col min-h-screen">
 
       <header className="flex items-center justify-between bg-customBlue text-white px-6 py-2">
-        <Link to="/">
+        <Link to="/" className="flex items-center">
           <img src={concertai} alt="Logo" className="h-24 invert" />
         </Link>
-        <div className="space-x-2">
-          <button className="bg-white text-blue-900 px-4 py-1 rounded hover:bg-gray-200 text-lg">Cadastrar-se</button>
-          <button className="border border-white px-4 py-1 rounded hover:bg-white hover:text-blue-900 text-lg">Login</button>
+        <div className="flex items-center space-x-2">
+          <button className="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-200 text-lg">Cadastrar-se</button>
+          <button className="border border-white px-4 py-2 rounded hover:bg-white hover:text-blue-900 text-lg">Login</button>
         </div>
       </header>
+
 
 
       <main className="flex-1 container mx-auto px-4 py-8">
